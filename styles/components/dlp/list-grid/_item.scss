@@ -1,0 +1,7 @@
+@mixin base() {
+    flex-direction: column;
+}
+
+&__item {
+    @include make-grid-item();
+}

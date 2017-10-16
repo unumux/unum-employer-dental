@@ -1,0 +1,10 @@
+@mixin base() {
+
+}
+
+&-summary {
+    @include base;
+
+    @import 'heading';
+    @import 'icon';
+}

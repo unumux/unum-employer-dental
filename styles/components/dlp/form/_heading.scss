@@ -1,0 +1,8 @@
+@mixin base() {
+    color: #015294;
+}
+
+
+&__heading {
+    @include base;
+}

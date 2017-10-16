@@ -1,0 +1,9 @@
+.willow-page-footer {
+    border-top: 10px solid #49B3BC;
+
+    &__content {
+        color: #fff;
+        @include set-text-style($text-style-content-3);
+        order: 2;
+    }
+}

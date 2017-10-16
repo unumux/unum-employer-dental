@@ -1,0 +1,19 @@
+.willow-page-header {
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.willow-page-header__branding {
+    margin: 0;
+    padding: 0;
+    
+    &:first-child {
+        margin: 0;
+    }
+}
+
+.willow-page-header__navigation {
+    transform: translateY(2rem);
+}

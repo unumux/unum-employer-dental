@@ -1,0 +1,9 @@
+@mixin base() {
+
+}
+
+&-card {
+    @include base;
+
+    @import 'heading';
+}

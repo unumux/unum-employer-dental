@@ -1,0 +1,10 @@
+@mixin base() {
+
+}
+
+&-form {
+    @include base;
+
+    @import 'heading';
+
+}

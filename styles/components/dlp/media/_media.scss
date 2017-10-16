@@ -1,0 +1,12 @@
+@import "default-variables";
+
+@mixin base() {
+
+}
+
+&-media {
+    @include base;
+
+    @import 'container';
+    @import 'heading';
+}

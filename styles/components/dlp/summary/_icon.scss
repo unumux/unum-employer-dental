@@ -1,0 +1,13 @@
+@mixin base() {
+    background-color: #2299A2;
+    border-radius: 50%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: space(4);
+
+}
+
+&__icon{
+    @include base;
+}
