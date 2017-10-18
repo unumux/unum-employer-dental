@@ -1,11 +1,44 @@
+h1 {
+
+    font-size: $font-size-2xl;
+    
+    @media all and (min-width: 768px) {
+        font-size: $font-size-3xl;
+    }
+}
 
 .middle-banner {
     background-image: url("../../images/bg-banner.jpg");
 }
 
 .dlp-logo-text {
-    border-left: 2px solid #fff;
-    color: #fff;
+    border-left: 2px solid $component-logo-border-color;
+    color: $component-logo-text-color;
     margin-left: space(1);
     padding-left: space(1);
+}
+
+$component-card-icon-height: 140px;
+$component-card-icon-width: 140px;
+
+.card-1 {
+    background-image: url("http://fillmurray.com/200/200");
+}
+
+.card-2 {
+    background-image: url("http://fillmurray.com/200/200");
+}
+
+.card-3 {
+    background-image: url("http://fillmurray.com/200/200");
+}
+
+.card-1,
+.card-2,
+.card-3 {
+    border-radius: 100%;
+    height: $component-card-icon-height;
+    margin: 0 auto $space;
+    width: $component-card-icon-width;
+
 }

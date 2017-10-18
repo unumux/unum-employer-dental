@@ -1,0 +1,74 @@
+.heading {
+
+    
+    &__text {
+        @include full-bleed;
+
+        background-image: url("../../../../images/top-banner.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-bottom: 15px solid $component-border-color;        
+        padding-bottom: 13.6rem;
+        padding-left: 6.8rem;
+        padding-right: 6.8rem;
+        padding-top: 6.8rem;
+    
+        @media all and (min-width: 768px) {
+            background-position: center center;
+            background-size: cover;
+            height: 37rem;
+    
+        }
+
+    }
+
+    &__caption {
+        
+        background-color: #fff;
+        box-shadow: 0px 5px 2px #E6E8EA;
+        margin-bottom: -5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 105rem;
+        padding-bottom: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 3rem;
+        position: relative;
+        top: -7rem;
+        text-align: center;
+        
+        @media all and (min-width: 768px) {
+            margin: 0 auto;
+        }
+    }
+    
+    &__container {
+        height: 0;
+    }
+
+    &__heading {
+        @include set-text-style($text-style-heading-1);
+        
+        color: $color-blue;
+    }
+
+    &__description {
+        @include set-text-style($text-style-heading-3);
+    }
+    
+    &__section {
+        @include full-bleed;
+        background-color: $theme-base-2;
+        padding-top: 25rem;
+        padding-bottom: 4rem;
+
+        &--description {
+            @include set-text-style($text-style-heading-3);            
+            
+            font-weight: 200;
+            text-align: center;
+        }
+    }
+}

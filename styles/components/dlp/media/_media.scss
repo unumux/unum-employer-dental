@@ -1,12 +1,14 @@
 @import "default-variables";
 
-@mixin base() {
-
-}
-
 &-media {
-    @include base;
 
-    @import 'container';
+    @import 'content';
     @import 'heading';
+    @import 'video';
+    @import 'videoWrapper';
+    @import 'videoContent';
+
+    display: flex;
+    margin-bottom: $space-xxl;
+    margin-top: $space-xxl;
 }

@@ -1,10 +1,11 @@
-@mixin base() {
-
-}
-
 &-form {
-    @include base;
+    padding: $space-inset-xxl;
+    text-align: center;
 
+    @import 'actions';
+    @import 'action';
+    @import 'content';
+    @import 'description';
     @import 'heading';
 
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5px" height="9px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>btn-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Employer-Cross-Sell---Desktop" transform="translate(-731.000000, -2977.000000)" fill="#FFFFFF">
+            <g id="form-Section" transform="translate(0.000000, 2502.000000)">
+                <g id="btn" transform="translate(558.000000, 454.000000)">
+                    <g id="Group-5" transform="translate(32.000000, 16.000000)">
+                        <g id="Group-4">
+                            <path d="M141.452893,13.6978445 C140.990893,13.3958445 140.860893,12.7768445 141.162893,12.3138445 L143.045893,9.43084454 L141.162893,6.54784454 C140.860893,6.08484454 140.990893,5.46484454 141.452893,5.16284454 C141.915893,4.86084454 142.535893,4.99084454 142.836893,5.45384454 L145.434893,9.43084454 L142.836893,13.4078445 C142.644893,13.7018445 142.325893,13.8608445 141.998893,13.8608445 C141.811893,13.8608445 141.621893,13.8078445 141.452893,13.6978445 Z" id="btn-arrow"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

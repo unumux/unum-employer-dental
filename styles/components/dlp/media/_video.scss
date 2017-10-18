@@ -1,0 +1,24 @@
+@mixin base() {
+    margin: 0 auto;
+    transform: translateY(0.2rem);
+    width: 90%;
+
+    @media screen and (min-width: 768px) {
+        // flex-basis: 50%;
+        // flex-grow: 0;
+        // flex-shrink: 1;
+        // max-width: 725px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        // flex-basis: auto;
+        // flex-grow: 0;
+        // flex-shrink: 1;
+    }
+}
+
+
+&__video {
+    @include base;
+
+}

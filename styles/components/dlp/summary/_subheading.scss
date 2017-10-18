@@ -1,0 +1,7 @@
+&__subheading {
+    @include set-text-style($text-style-heading-3);
+
+    font-weight: 400;
+    margin-bottom: space(3);
+    text-align: center;
+}

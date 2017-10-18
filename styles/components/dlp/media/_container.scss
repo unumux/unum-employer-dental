@@ -1,7 +1,0 @@
-@mixin base() {
-    display: flex;
-}
-
-&__container {
-    @include base;
-}

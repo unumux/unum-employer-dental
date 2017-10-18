@@ -6,4 +6,9 @@
         @include set-text-style($text-style-content-3);
         order: 2;
     }
+
+    &__formtag {
+        font-weight: 600;
+        margin-left: $space-s;
+    }
 }

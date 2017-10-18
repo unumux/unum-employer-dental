@@ -1,0 +1,11 @@
+@mixin base() {
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+&__videoWrapper {
+    @include base;
+}

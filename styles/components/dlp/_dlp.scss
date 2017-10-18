@@ -1,8 +1,10 @@
 .dlp {
     @import 'card/card';
+    @import 'feature/feature';
     @import 'form/form';
     @import 'list-grid/list-grid';
     @import "media/media";
     @import "summary/summary";
-
 }
+
+@import 'heading/heading';
