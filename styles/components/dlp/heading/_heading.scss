@@ -52,6 +52,10 @@
         @include set-text-style($text-style-heading-1);
         
         color: $color-blue;
+
+        @media all and (min-width: 768px) {
+
+        }
     }
 
     &__description {
@@ -61,8 +65,21 @@
     &__section {
         @include full-bleed;
         background-color: $theme-base-2;
-        padding-top: 25rem;
         padding-bottom: 4rem;
+        padding-top: 25rem;
+
+        @media all and (min-width: 768px) {
+            padding-top: 15rem;
+        }
+
+        @media all and (min-width: 828px) {
+            padding-top: 25rem;
+        }
+        
+        @media all and (min-width: 992px) {
+            padding-top: 15rem;
+
+        }
 
         &--description {
             @include set-text-style($text-style-heading-3);            
