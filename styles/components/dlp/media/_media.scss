@@ -3,6 +3,7 @@
 &-media {
 
     @import 'content';
+    @import 'description';
     @import 'heading';
     @import 'video';
     @import 'videoWrapper';
@@ -13,7 +14,7 @@
     margin-bottom: $space-xxl;
     margin-top: $space-xxl;
 
-    @media all and (min-width: 768px) {
+    @media all and (min-width: 992px) {
         flex-direction: row;
     }
 }

@@ -1,0 +1,7 @@
+&-confirm {
+    padding: $space-inset-xxl;
+    text-align: center;
+
+    @import 'heading';
+    @import 'description';
+}

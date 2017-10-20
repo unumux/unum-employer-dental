@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unum Employer Dental Site</title>
+    <link rel="stylesheet" href="styles/site.min.css">
+    <!-- <link rel="stylesheet" href="styles/theme-unum-default.min.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="willow-skip-nav">
+            <a href="#" class="willow-skip-nav__link" aria-label="skip to main content">Skip to Content</a>
+        </div>
+        <main class="willow-page-content" id="" role="main">
+            <section class="dlp-confirm">
+                <h1 class="dlp-confirm__heading">Thank you!</h1>
+                <p class="dlp-confirm__description">Thank you for reaching out. One of the representatives you likely know from our office will call you back within two working days to get the process started. </p>
+            </section>
+        </main>
+    </div>
+    <script src="scripts/site.min.js"></script>
+</body>
+</html>
+
+
+<script>
+        
+            var previousAudienceDD = "NotSet"
+        
+            $(document).ready(function() {
+            });
+        
+        
+        
+            // use "name" instead of ID because Silverpop assigns the ID
+            $('input[name="FirstName"]').focusout( function(){
+               myValidateField($(this))
+            })
+            $('input[name="LastName"]').focusout( function(){
+               myValidateField($(this))
+            })
+            $('input[name="Email"]').focusout( function(){
+               myValidateField($(this))
+            })
+            $('input[name="Zip Code"]').focusout( function(){
+               myValidateField($(this))
+            })
+            $('input[name="Company Name"]').focusout( function(){
+               myValidateField($(this))
+            })
+            $('textarea[name="comments"]').focusout( function(){
+               myValidateField($(this))
+            })
+        
+        
+            // format all of the required fields when clicking the Submit button
+            $('input[name="Submit"]').click( function(){
+               myValidateField($('input[name="FirstName"]'))
+               myValidateField($('input[name="LastName"]'))
+               myValidateField($('input[name="Email"]'))
+               myValidateField($('input[name="Zip Code"]'))
+               myValidateField($('textarea[name="comments"]'))
+               myValidateField($('input[name="Company Name"]'))
+               // if( $('#erBtn, #brBtn').hasClass('active') ){
+               //  myValidateField($('input[name="Company Name"]'))
+               // }
+            })
+        
+            $('#erBtn').click( function(){
+               $(this).toggleClass('active')
+               $('#eeBtn').removeClass('active')
+               $('#brBtn').removeClass('active')
+               //requiredON('Company Name')
+                   if (previousAudienceDD == "NotSet"){
+                       $('.ffEmployer').slideDown(); // show
+                   }
+                   if (previousAudienceDD == "Broker"){
+                       $('.ffEmployer').slideDown(); // show
+                   }
+                   if (previousAudienceDD == "Employee"){
+                       $('.ffEmployee').slideUp(); // hide
+                       $('.ffEmployer').slideDown(); // show
+                       $('.ffBroker').slideDown(); // show
+                   }
+                   previousAudienceDD = "Employer"
+                   $('input[name="LeadIdentifier"]').val('Employer')
+        
+                   if ( !$('#eeBtn').hasClass("active") &&
+                        !$('#erBtn').hasClass("active") &&
+                        !$('#brBtn').hasClass("active") 
+                   ){
+                       $('.ffEmployer').slideUp(); // hide
+                       previousAudienceDD = "NotSet"
+                       $('input[name="LeadIdentifier"]').val('NotSet')
+                   }
+            })
+        
+            $('#brBtn').click( function(){
+               $(this).toggleClass('active')
+               $('#eeBtn').removeClass('active')
+               $('#erBtn').removeClass('active')
+               //requiredOFF('Company Name')
+                   if (previousAudienceDD == "NotSet"){
+                       // do nothing.  NotSet is same as Broker
+                   }
+                   if (previousAudienceDD == "Employer"){
+                       $('.ffEmployer').slideUp(); // hide
+                   }
+                   if (previousAudienceDD == "Employee"){
+                       $('.ffEmployee').slideUp(); // hide
+                       $('.ffBroker').slideDown(); // show
+                   }
+                   previousAudienceDD = "Broker"
+                   $('input[name="LeadIdentifier"]').val('Broker')
+        
+                   if ( !$('#eeBtn').hasClass("active") &&
+                        !$('#erBtn').hasClass("active") &&
+                        !$('#brBtn').hasClass("active") 
+                   ){
+                       previousAudienceDD = "NotSet"
+                       $('input[name="LeadIdentifier"]').val('NotSet')
+                   }
+            })
+        
+            $('#eeBtn').click( function(){
+               $(this).toggleClass('active')
+               $('#erBtn').removeClass('active')
+               $('#brBtn').removeClass('active')
+               //requiredOFF('Company Name')
+                   $('.ffEmployee').slideDown(); // show
+                   $('.ffAll').slideUp(); // hide
+                   previousAudienceDD = "Employee"
+                   $('input[name="LeadIdentifier"]').val('Employee')
+        
+                   if ( !$('#eeBtn').hasClass("active") &&
+                        !$('#erBtn').hasClass("active") &&
+                        !$('#brBtn').hasClass("active") 
+                   ){
+                       $('.ffEmployee').slideUp(); // hide
+                       $('.ffBroker').slideDown(); // show
+                       previousAudienceDD = "NotSet"
+                       $('input[name="LeadIdentifier"]').val('NotSet')
+                   }
+            })
+        
+        
+        
+            function myValidateField(x){
+               if ( x.val() == "" ){
+                   formatInvalid(x)
+               }
+               else{
+                   formatValid(x)
+               }
+            }
+        
+            function formatInvalid(x){
+               x.css("border-color","red")
+               x.css("background-color","pink")
+            }
+            function formatValid(x){
+               x.css("border-color","initial")
+               x.css("background-color","rgba(256,256,256, .98)")
+            }
+        
+            function requiredON(x){
+               $('input[name="'+x+'"]').prop('required', true)
+            }
+            function requiredOFF(x){
+               $('input[name="'+x+'"]').prop('required', false)
+            }
+        
+        
+            $(function () {
+               if (hasHtml5Validation()) {
+                   $('.validate-form').submit(function (e) {
+                       if (!this.checkValidity()) {
+                           // Prevent default stops form from firing
+                           e.preventDefault();
+                           $(this).addClass('invalid');
+                           $('#status').html('invalid');
+                       }
+                       else {
+                           $(this).removeClass('invalid');
+                           $('#status').html('submitted');
+                       }
+                   });
+               }
+            });
+        
+            function hasHtml5Validation () {
+               return typeof document.createElement('input').checkValidity === 'function';
+            }
+        
+        
+            </script>

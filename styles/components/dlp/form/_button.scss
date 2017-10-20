@@ -1,0 +1,8 @@
+&__button {
+    display: inline-block;
+    width: 100%;
+
+    @media all and (min-width: 768px) {
+        width: initial;
+    }
+}

@@ -8,7 +8,7 @@ h1 {
 }
 
 .middle-banner {
-    background-image: url("../../images/bg-banner.jpg");
+    background-image: url("http://unumemarketing.com/dental-employer/bg-banner.jpg");
 }
 
 .dlp-logo-text {
@@ -22,15 +22,15 @@ $component-card-icon-height: 140px;
 $component-card-icon-width: 140px;
 
 .card-1 {
-    background-image: url("http://fillmurray.com/200/200");
+    background-image: url("http://unumemarketing.com/dental-employer/learn-image.png");
 }
 
 .card-2 {
-    background-image: url("http://fillmurray.com/200/200");
+    background-image: url("http://unumemarketing.com/dental-employer/share-image.png");
 }
 
 .card-3 {
-    background-image: url("http://fillmurray.com/200/200");
+    background-image: url("http://unumemarketing.com/dental-employer/explore-image.png");
 }
 
 .card-1,
@@ -42,3 +42,19 @@ $component-card-icon-width: 140px;
     width: $component-card-icon-width;
 
 }
+
+.row-mobile {
+    @media all and (max-width: 768px) {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.fieldLabel {
+    text-align: left;
+}
+
+.form-space {
+    margin: $space-stack-s;
+}
+

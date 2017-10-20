@@ -4,7 +4,7 @@
     &__text {
         @include full-bleed;
 
-        background-image: url("../../../../images/top-banner.jpg");
+        background-image: url("http://unumemarketing.com/dental-employer/top-banner.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -60,24 +60,26 @@
 
     &__description {
         @include set-text-style($text-style-heading-3);
+
+        font-weight: 200;
     }
     
     &__section {
         @include full-bleed;
         background-color: $theme-base-2;
         padding-bottom: 4rem;
-        padding-top: 25rem;
+        padding-top: 20rem;
 
         @media all and (min-width: 768px) {
             padding-top: 15rem;
         }
 
         @media all and (min-width: 828px) {
-            padding-top: 25rem;
+            padding-top: 16rem;
         }
         
         @media all and (min-width: 992px) {
-            padding-top: 15rem;
+            padding-top: 9rem;
 
         }
 
