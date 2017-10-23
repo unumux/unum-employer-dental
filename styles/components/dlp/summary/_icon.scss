@@ -2,7 +2,7 @@
     background-color: #2299A2;
     border-radius: 50%;
     display: block;
-    height: auto;
+    height: 100%; // changed from auto to fix bug
     margin: 0 auto $space auto;
     width: space(4);
 
