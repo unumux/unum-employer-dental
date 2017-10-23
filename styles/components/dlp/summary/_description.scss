@@ -1,4 +1,7 @@
 &__description {
+    @include set-text-style($text-style-heading-3);
+    
+    font-weight: 200;
     margin: $space-stack-l;
     text-align: center;
 
